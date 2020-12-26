@@ -1,0 +1,8 @@
+[01/Oct/2020:11:46:05 +0000] 94.104.219.67 samysahbe@samysahbe RETR /data/sites/web/samysahbe/tmp/.gitignore 226 0
+[01/Oct/2020:11:46:26 +0000] 94.104.219.67 samysahbe@samysahbe RETR /data/sites/web/samysahbe/.crontab 226 364
+[01/Oct/2020:11:46:26 +0000] 94.104.219.67 samysahbe@samysahbe RETR /data/sites/web/samysahbe/.bashrc 226 271
+[01/Oct/2020:11:46:26 +0000] 94.104.219.67 samysahbe@samysahbe RETR /data/sites/web/samysahbe/cgi-bin/.gitignore 226 0
+[01/Oct/2020:11:46:26 +0000] 94.104.219.67 samysahbe@samysahbe RETR /data/sites/web/samysahbe/tmp/.gitignore 226 0
+[01/Oct/2020:11:46:26 +0000] 94.104.219.67 samysahbe@samysahbe RETR /data/sites/web/samysahbe/data/.gitignore 226 0
+[01/Oct/2020:11:46:26 +0000] 94.104.219.67 samysahbe@samysahbe RETR /data/sites/web/samysahbe/subsites/.gitignore 226 0
+[01/Oct/2020:11:46:27 +0000] 94.104.219.67 samysahbe@samysahbe RETR /data/sites/web/samysahbe/www/index.html 226 1040
