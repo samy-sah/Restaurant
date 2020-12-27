@@ -248,62 +248,62 @@ if (strcasecmp($_GET['m'], 'login') == 0) {
 }
 
 
-// // --- get the time of the server!
-// if (strcasecmp($_GET['m'], 'getTime') == 0) {
+// --- get the time of the server!
+if (strcasecmp($_GET['m'], 'getTime') == 0) {
 
-//     if (!$conn) {
-//         $response['code'] = 0;
-//         $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
-//         $response['data'] = mysqli_connect_error();
+    if (!$conn) {
+        $response['code'] = 0;
+        $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
+        $response['data'] = mysqli_connect_error();
 
-//     } else {
-//         $response['code'] = 1;
-//         $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
-//         // het tijdstip van de server opvragen (volgens de db), zodat we kunnen
-//         // synchroniseren met bvb onze eigen app.
-//         $sql = "select now() as servertime";
-//         $result = $conn -> query($sql);
-//         $rows = array();
-//         while ($row = $result -> fetch_assoc()) {
-//             $rows[] = $row;
-//         }
-//         $response['data'] = $rows[0];
-//     }
+    } else {
+        $response['code'] = 1;
+        $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
+        // het tijdstip van de server opvragen (volgens de db), zodat we kunnen
+        // synchroniseren met bvb onze eigen app.
+        $sql = "select now() as servertime";
+        $result = $conn -> query($sql);
+        $rows = array();
+        while ($row = $result -> fetch_assoc()) {
+            $rows[] = $row;
+        }
+        $response['data'] = $rows[0];
+    }
 
-// }
+}
 
-// // --- productenlijst
-// if (strcasecmp($_GET['m'], 'getProducten') == 0) {
+// --- productenlijst
+if (strcasecmp($_GET['m'], 'getProducten') == 0) {
 
-//     if (!$conn) {
-//         $response['code'] = 0;
-//         $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
-//         $response['data'] = mysqli_connect_error();
+    if (!$conn) {
+        $response['code'] = 0;
+        $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
+        $response['data'] = mysqli_connect_error();
 
-//     } else {
-//         $response['code'] = 0;
-//         $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
-//         // de login nakijken
-//         // @FIXME : nakijken of hier niets moet gedaan worden met deze input : in welk formaat is dit?
-//         // vooral met speciale tekens zoals in Björn moet ik opletten (op deze server :-/)
-//         $lQuery = "select * FROM producten";
-//         $result = $conn -> query($lQuery);
-//         $rows = array();
-//         if (!$result) {
-//             $response['data'] = "db error";
-//         } else {
+    } else {
+        $response['code'] = 0;
+        $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
+        // de login nakijken
+        // @FIXME : nakijken of hier niets moet gedaan worden met deze input : in welk formaat is dit?
+        // vooral met speciale tekens zoals in Björn moet ik opletten (op deze server :-/)
+        $lQuery = "select * FROM producten2";
+        $result = $conn -> query($lQuery);
+        $rows = array();
+        if (!$result) {
+            $response['data'] = "db error";
+        } else {
 
-//             while ($row = $result -> fetch_assoc()) {
-//                 $rows[] = $row;
-//             }
+            while ($row = $result -> fetch_assoc()) {
+                $rows[] = $row;
+            }
             
-//             $response['code'] = 1;
-//             $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
-//             $response['data'] = $rows;
+            $response['code'] = 1;
+            $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
+            $response['data'] = $rows;
            
-//         }
-//     }
-// }
+        }
+    }
+}
 
 // --- Step 3.99: close the DB connection
 mysqli_close($conn);

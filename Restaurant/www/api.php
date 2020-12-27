@@ -171,7 +171,7 @@ if ($authentication_required) {
 
         } else {
             // de login nakijken
-            $lQuery = "select * FROM gebruikers where NAME like '" . $postvars['name'] . "' and PW like '" . $postvars['password'] . "'";
+            $lQuery = "select * FROM admin where NAME like '" . $postvars['name'] . "' and PW like '" . $postvars['password'] . "'";
             $result = $conn -> query($lQuery);
             $rows = array();
             if (!$result) {
@@ -224,7 +224,7 @@ if (strcasecmp($_GET['m'], 'login') == 0) {
         $response['status'] = $api_response_code[$response['code']]['HTTP Response'];
         // de login nakijken
         // let op : we halen deze uit $postvars ipv uit $_POST, wat je online meer zal tegenkomen.
-        $lQuery = "select * FROM gebruikers where NAME like '" . $postvars['name'] . "' and PW like '" . $postvars['password'] . "'";
+        $lQuery = "select * FROM admin where NAME like '" . $postvars['name'] . "' and PW like '" . $postvars['password'] . "'";
         $result = $conn -> query($lQuery);
         $rows = array();
         if (!$result) {
@@ -286,7 +286,7 @@ if (strcasecmp($_GET['m'], 'getProducten') == 0) {
         // de login nakijken
         // @FIXME : nakijken of hier niets moet gedaan worden met deze input : in welk formaat is dit?
         // vooral met speciale tekens zoals in Björn moet ik opletten (op deze server :-/)
-        $lQuery = "select * FROM producten";
+        $lQuery = "select * FROM producten2";
         $result = $conn -> query($lQuery);
         $rows = array();
         if (!$result) {

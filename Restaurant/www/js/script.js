@@ -2,7 +2,7 @@
 	"use strict";
 	/*jslint browser: true*/
 	/*jslint devel: true*/
-	let apiAddress = "https://stevenop.be/wm/les2/api.php?";
+	let apiAddress = "http://www.samysah.be/Restaurant/samysah.be/www/wm/PhpResto/api.php?";
 	/* Vorige lijn aanpassen naar jouw domein! */
 	
 	let alertEl = document.getElementById("alert");
@@ -55,7 +55,8 @@
 
 				if (Object.keys(list).length > 0) {
 					// list bevat minstens 1 property met waarde
-					list.ID = parseInt(list.ID);   
+                    list.ID = parseInt(list.ID);
+					window.location.href = "http://www.w3schools.com";
 					// alles wat via json komt, is standaard een string of een object.
 					// hier is het omzetten naar een int wel niet nodig, omdat we er niet met gaan rekenen
 					alerter("Gebruikersgevens ok : ID = " + list.ID);
@@ -94,7 +95,7 @@
 					// er zit minstens 1 item in list, we geven dit ook onmiddelijk weer
 					var tLijst = "<span class='rij kOdd'><span>ID</span><span>Omschrijving</span><span>Prijs</span></span>";
 					for (var i = 0; i < list.length; i++) {
-						tLijst += "<span class='rij'><span>" + list[i].id + "</span><span>" + list[i].Omschrijving + "</span><span>" + list[i].prijs + "</span></span>";
+						tLijst += "<span class='rij'><span>" + list[i].PR_CT_ID + "</span><span>" + list[i].PR_naam + "</span><span>" + list[i].prijs + "</span></span>";
 					}
 					tLijst += "<br>";
 
